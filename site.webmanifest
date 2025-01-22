@@ -1,0 +1,12 @@
+{
+    "name": "UKBOB: ",
+    "short_name": "UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image Segmentation",
+    "icons": [{
+        "src": "assets/logo.png",
+        "sizes": "290x288",
+        "type": "image/png"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

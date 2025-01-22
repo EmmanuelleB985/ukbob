@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XB3PR2Y1TQ');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image
+        Segmentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- compare two images -->
+    <!-- <link rel="stylesheet" href="assets/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/bulma-slider.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+
+
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:site_name" content="UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image
+                            Segmentation" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image Segmentation" />
+    <meta property="og:description" content="UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image Segmentation" />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+
+    <script src="assets/js/bulma-carousel.min.js"></script>
+    <script src="assets/js/bulma-slider.min.js"></script>
+</head>
+
+<body>
+
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+        <div class="container" style="max-width: 100%;">
+            <br>
+            <h1 class="text-center">UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image Segmentation</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="container align-items-center">
+            <div class="container author-container">
+                <div class="row authors">
+                    <div class="col">
+                        <h5><a href="https://emmanuelleb985.github.io/emmanuellebourigault/">Emmanuelle Bourigault<span>&#42;</span> </a></h5>
+                    </div>
+                    <div class="col">
+                        <h5><a href="">Amir Jamaludin </a></h5>
+                    </div>
+                    <div class="col">
+                        <h5><a href="https://abdullahamdi.com/">Abdullah Hamdi<span>&#42;</span> </a></h5>
+                    </div>
+                </div>
+                </div>
+                <div class="row affiliations">
+                    <div class="col">
+                        <h6 class="text-center"><a class="text-center">Visual Geometry Group, University of Oxford</a></h6>
+                    </div>
+                </div>
+                <h6 class="text-center"><span>&#42;</span> Equal Contribution</h6>
+            </div>
+        </div>
+        <div class="container align-items-center">
+            <div class="row text-center mx-auto">
+                <div class="col-sm-4">
+                    <a href="" target="_blank" class="link-block w-inline-block">
+                        <img src="assets/media/arxiv_paper.png" alt="paper" class="img-fluid" style="height:100px" /></a>
+                    <br>
+                    <div class="text-block-2"><strong class="bold-text-nerf_v2">Arxiv</strong></div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="" target="_blank" class="link-block w-inline-block">
+                        <img src="assets/media/github.png" alt="github" class="img-fluid" style="height:100px" /></a>
+                    <br>
+                    <div class="text-block-2"><strong class="bold-text-nerf_v2">Code</strong></div>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://youtu.be/AIVzeS2nJv8?si=NPqrLqegjtbLy-Z6" target="_blank" class="link-block w-inline-block">
+                        <img src="assets/media/video_logo.png" alt="Youtube" class="img-fluid" style="height:100px" /></a>
+                    <br>
+                    <div class="text-block-2"><strong class="bold-text-nerf_v2">Video</strong></div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider" />
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <img src="" style="max-width: 100%; object-fit: contain"/>
+            </div>
+        </div>   
+        <div class="container" style="max-width: col-sm-12;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Abstract</h2>
+                    <p style="text-align: justify">
+                        We present the UK Biobank Organs and Bones </h1>UKBOB</h1> , the largest labeled dataset of body organs of 51,761 MRI 3D samples (17.9 M 2D images) and a total of more than 1.37 billion 2D segmentation masks
+                        of 72 organs based on the UK Biobank MRI dataset. We utilize automatic labeling and propose a novel mechanism for filtering and picking the labels based on normalized body statistics, which allows for scaling up 
+                        the dataset collection while maintaining confidence in the labels. We confirm this by the zero-shot generalization of trained models on the filtered UKBOB to other small labeled datasets from a similar domain 
+                        (abdominal MRI). To further elevate the effect of the noisy labels, we propose a novel Entropy Test-time Adaptation (ETTA) to refine the segmentation output. We use UKBOB to train a foundation model </h1>Swin-BOB</h1> 
+                        for 3D medical image segmentation based on Swin-UNetr, achieving SOTA results in several benchmarks in 3D medical imaging.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--<hr class="divider" />
+        <div class="container" style="max-width: col-sm-12;">
+            <h2>Video</h2>
+            <div class="row justify-content-center">
+                <iframe width="600" height="378" src="assets/.mp4" title="X-Diffusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+            </div>
+        </div>-->
+
+        <hr class="divider" />
+        <div class="container" style="max-width: col-sm-12;">
+            <h2>Swin-BoB: Large-Scale Segmentation Model on Body MRIs from UK Biobank</h2>
+
+            <div class="col-sm-12">
+                <img src="assets/pullfigure_2.pdf" style="max-width: 90%;"/>
+                <p><span style="font-weight:bold">UKBOB Size and Diversity.</span> Our proposed UK BioBank Organs and Bones is the largest labeled medical imaging dataset for segmentation, comprising body organs of 51,761 MRI 3D samples (17.9 M 2D images) and a total of more than 1.37 billion 2D masks of 72 organs.We show a plot of the size (number of 2D images) and diversity (number of classes) of our \methodname compared to other medical images datasets. The size of the bubbles indicates 2D image resolution. </p> 
+            </div>
+
+            <div class="col-sm-12">
+                <img src="assets/UKBB_Coronal_1.png" style="max-width: 90%;"/>
+            </div>
+
+            <div class="col-sm-12">
+                <img src="assets/UKBB_Sagittal_1.png" style="max-width: 90%;"/>
+                <p><span style="font-weight:bold">UKBOB Labels with our Filtration.</span> We show an example of labels in UKBOB on the coronal and sagittal plane. </p> 
+            </div>
+        </div>
+
+        <hr class="divider" />
+        <div class="container">
+
+            <h2> Label Filtering</h2>
+            <p></p>
+            <p> </p>
+            <div class="row justify-content-center">
+                <div class="col-sm-12">
+                    <img src="assets/overall_plot_labels.png" style="max-width: 90%;"/>
+                    <p><span style="font-weight:bold">UKBOB Distribution of Labels with our Filtration.</span> We show the distribution mean normalised volumes of 72 labels before and after filtration </p> 
+                </div>
+            </div>
+            <p></p>
+            <div class="row justify-content-center">
+                <div class="col-sm-6">
+                    <img src="" style="max-width: 100%; object-fit: contain"/>
+                </div>
+            </div> 
+
+            <h2>Entropy Test-time Adaptation (ETTA)</h2>
+            <p></p>
+            <div class="row justify-content-center">
+                <div class="col-sm-12">
+                    <img src="assets/TTA.png" style="max-width: 90%; object-fit: contain"/>
+                    <p><span style="font-weight:bold"> Effect of Entropy Test Time Adaptation (ETTA).</span> We show the benefit of using our proposed ETTA to improve the performance
+                        of fine-tuning models on BTCV (Xi Fang and Pingkun Yan (2020)), BRATS (Ujjwal Baid et al, Spyridon Bakas et al, and Bjoern H. Menze et al), and AMOS (Yuanfeng Ji et al, 2022). The best results are obtained by fine-tuning our baseline Swin-BOB
+                        pretrained on the UKBOB dataset. Our ETTA improves on different networks on different downstream tasks and better than the TTA
+                        baseline.</p> 
+                </div>
+            </div>        
+            
+        <hr class="divider" />
+        <div class="container">
+            <h2> Zero-Shot Segmentation on Out-of-Domain (OOD) Data</h2>
+            <p style="text-align: justify"> </p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="assets/3D_Segmentation_BTCV.png" style="max-width: 90%;"/>
+                    <p><span style="font-weight:bold">Table 1: 3D Segmentation Performance of Swin-BoB on BTCV dataset.</span> </p> 
+                </div>
+            </div>
+            <h2> Effect of Filtering</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="assets/Effect_Filtering.png" style="max-width: 50%;"/>
+                    <p><span style="font-weight:bold">Figure 1. UKBOB Filtration Effect on Zero-shot 3D Segmenta-
+                        tion Performance.</span>We show the zero-shot performance of Swin-
+                        BoB on AMOS external MRI data and CT (BTCV) for the same
+                        organ classes. We use this zero-shot performance to calibrate the
+                        quality of the collected labels at UKBOB. IQR refers to Interquar-
+                        tile Range, which is a measure of variability, based on dividing a
+                        data set into quartiles.</p> 
+                </div>
+            </div>
+            <h2> ETTA for Refined Segmentation on OOD Data </h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="assets/ETTA.png" style="max-width: 100%;"/>
+                    <p><span style="font-weight:bold">Figure 2.</span> We show the benefit of using our proposed ETTA to improve the performance
+                        of fine-tuning models on BTCV, BRATS, and AMOS. The best results are obtained by fine-tuning our baseline Swin-BOB
+                        pretrained on the UKBOB dataset. Our ETTA improves on different networks on different downstream tasks and better than the TTA
+                        baseline.</p> 
+                </div>
+            </div>
+
+            <h2> References</h2>
+            <div class="row">
+            <p style="text-align: justify"> 
+                Bjoern H. Menze et al. The multimodal brain tumor image segmentation benchmark (brats). I E E E Transactions on Medical Imaging,2015.
+            </p>
+            <p style="text-align: justify"> Ling Zhang, Xiaosong Wang, Dong Yang, Thomas Sanford,
+                Stephanie A. Harmon, Baris I Turkbey, Bradford J. Wood,
+                Holger R. Roth, Andriy Myronenko, Daguang Xu, and Ziyue
+                Xu. Generalizing deep learning for medical image segmen-
+                tation to unseen domains via deep stacked transformation.
+                IEEE Transactions on Medical Imaging, 39:2531–2540, 2020.</p>
+            <p style="text-align: justify">Yuanfeng Ji, Haotian Bai, Chongjian GE, Jie Yang, Ye Zhu,
+                Ruimao Zhang, Zhen Li, Lingyan Zhanng, Wanling Ma, Xi-
+                ang Wan, and Ping Luo. Amos: A large-scale abdominal
+                multi-organ benchmark for versatile medical image segmen-
+                tation. In S. Koyejo, S. Mohamed, A. Agarwal, D. Belgrave,
+                K. Cho, and A. Oh, editors, Advances in Neural Information
+                Processing Systems, volume 35, pages 36722–36732. Curran
+                Associates, Inc., 2022.  </p>
+            <p style="text-align: justify"> 
+                Spyridon Bakas et al. Advancing the cancer genome atlas glioma mri collections with expert segmentation labels and radiomic features. Scientific Data, 4,Sept. 2017.
+            </p>
+            <p style="text-align: justify"> 
+                Ujjwal Baid et al. The rsna-asnr-miccai brats 2021 benchmark on brain tumor segmentation and ra-diogenomic classification. 
+            </p>
+            <p style="text-align: justify">Xi Fang and Pingkun Yan. Multi-organ segmentation over
+                partially labeled datasets with multi-scale feature abstraction,
+                2020. </p>
+            </div>
+        </div>
+
+        <hr class="divider" />
+        <div class="container">
+                    <h2>Citation</h2>
+                    <code>
+                        @misc{bourigault2025ukbob,<br>
+                        &nbsp; title  = {UKBOB: One Billion MRI Labels is All You Need for 3D Medical Image
+                            Segmentation},<br>
+                        &nbsp; author = {Emmanuelle Bourigault and Amir Jamaludin and Abdullah Hamdi},<br>
+                        &nbsp; year   = {2024},<br>
+                        &nbsp; eprint = {2404.19604},<br>
+                        &nbsp; archivePrefix = {arXiv},<br>
+                        &nbsp; primaryClass = {eess.IV},<br>
+                    }</code>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <hr class="divider" />
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" href="assets/videos/nerfies_paper.pdf">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                                We borrow the <a href="https://dreamfusion3d.github.io/">source code</a> for our
+                                website. We thank the authors of DreamFusion for their great templates.
+                                <!-- we just ask that you link back to this page in the footer.
+                            Please remember to remove the analytics code included in the header of the website which
+                            you do not want on your website. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+        <script src="assets/js/yall.js"></script>
+        <script>
+            yall({
+                observeChanges: true
+            });
+        </script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+        <!-- Import the component -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var video = document.getElementById('speed025');
+                video.playbackRate = 0.1; // Play at half speed
+            });
+        </script>
+       
+        <script>
+            new BeforeAfter({
+                id: '#example1'
+            });
+        </script>
+</body>
+
+</html>
